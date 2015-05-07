@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# ProjectManager
+# TemplateManager
+
+template_dir="/opt/tm/templates/"
 
 function treelist() {
     
     printf "\n\n"
-    tree /opt/pc/templates/
+    tree $template_dir
     printf "\n\n"
     
 }
@@ -13,7 +15,7 @@ function treelist() {
 function list() {
     
     printf "\n\n"
-    ls -1 /opt/pc/templates/
+    ls -1 $template_dir
     printf "\n\n"
     
 }
@@ -50,7 +52,7 @@ fi
 if [[ "$1" == "create" ]]
 then
     printf "\n\nCreating $2... "
-    cp /opt/pc/templates/$2/* .
+    cp ${template_dir}$2/* .
     printf "[done]\n\n"
     exit 0
 fi
@@ -58,7 +60,7 @@ fi
 if [[ "$1" == "copy" ]]
 then
     printf "\n\nCopying $2... "
-    cp /opt/pc/templates/$2 .
+    cp ${template_dir}$2 .
     printf "[done]\n\n"
     exit 0
 fi
