@@ -1,0 +1,168 @@
+\documentclass{beamer}
+%\usetheme{PaloAlto}
+\usetheme{Boadilla}
+\usecolortheme{crane}
+%\mode<presentation>
+
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{pifont} % symboly \ding{}
+
+
+\makeatletter
+\def\Ldescription{%
+  \@ifnextchar[{\beamer@testforospec}{\beamer@descdefault\beamer@descriptionwidth\@@Ldescription}%
+}
+
+\def\beamer@testforospec[{\@ifnextchar<{\beamer@scandefaultospec[}{\@Ldescription[}}%
+
+\def\beamer@scandefaultospec[#1]{\def\beamer@defaultospec{#1}\Ldescription}
+
+\def\@Ldescription[#1]{%
+\setbox\beamer@tempbox=\hbox{\def\insertdescriptionitem{#1}
+  \usebeamertemplate**{description item}}%
+\beamer@descdefault\wd\beamer@tempbox\@@description%
+}%
+
+\def\@@Ldescription{%
+  \beamer@descdefault35pt%
+  \list
+  {}
+  {\labelwidth\beamer@descdefault\leftmargin2.8em\let\makelabel\beamer@Ldescriptionitem}%
+  \beamer@cramped%
+  \raggedright
+  \beamer@firstlineitemizeunskip%
+}
+
+\def\endLdescription{\ifhmode\unskip\fi\endlist}
+\long\def\beamer@Ldescriptionitem#1{%
+  \def\insertdescriptionitem{#1}%
+  \hspace\labelsep{\parbox[b]{\dimexpr\textwidth-\labelsep\relax}{%
+        \usebeamertemplate**{description item}%
+    }}}
+\makeatother
+
+%==============================================================================
+
+
+
+\title[BI-PPR - Projekt, prezentace, rétorika]{Prezentace bakalářské práce}
+\subtitle[BI-PPR - Projekt, prezentace, rétorika]{Téma: Individuální třídní schůzky}
+\author[Karel Fiala]{Karel Fiala}
+\institute[ČVUT FIT]{
+   Fakulta informačních technologií \\
+   České vysoké učení technické v~Praze
+ }
+\date{\today}
+
+
+\begin{document}
+
+\begin{frame}
+   \titlepage
+\end{frame}
+
+
+\begin{frame}{Obsah prezentace}
+   \tableofcontents
+\end{frame}
+
+
+%\section{Úvodem}\label{sec:uvod}
+\section{Individuální třídní schůzky}
+\begin{frame}{Individuální třídní schůzky}
+Individuální třídní schůzky jsou trendem poslední doby. Snaha o zefektivnění vzdělávání žáků pomocí individuálního přístupu. \break
+  \begin{itemize}
+  \item Co to znamená? \break
+  \item K čemu je to dobré? \break
+  \item Jak to funguje nyní? \break
+  \item Jak to bude fungovat poté? \break
+  \end{itemize}
+\end{frame}
+
+
+\section{Představení bakalářské práce}
+\begin{frame}{Představení bakalářské práce}
+
+Informační systém pro správu, evidenci a organizaci individuálních třídních schůzek dále ITS \\ 
+\begin{flushleft}
+  Jak to bude fungovat:\\
+    \begin{itemize}
+    \item Vedení školy vypíše období, ve kterém probíhají ITS
+    \item Učitelé vypíší termíny, které jim časově vyhovují
+    \item Rodiče se přihlásí na konkrétní termín
+    \item Proběhne schůzka mezi učitelem, rodiče a žákem
+    \item \ldots bude to tak jednoduché?
+    \end{itemize} 
+\end{flushleft}
+
+Vedoucí: RNDr. Helena Wallenfelsová \\
+Oponent: Bc. Ing Ivan Ryant
+\end{frame}
+
+
+\section{Cíl bakalářské práce}
+\begin{frame}{Cíl bakalářské práce}
+Implementovat informační systém pro správu, evidenci a organizaci individuálních třídních schůzek, který bude:
+\break
+  \begin{itemize}
+  \item jednoduchý \\ - každému jen to, co nutně potřebuje \break
+  \item přehledný \\ - a také intuitivní \break
+  \item robustní \\ - omyly uživatelé, úmyslné pokusy způsobit chybu \break
+  \item efektivní \\ - cílem je vše usnadnit nikoliv zkomplikovat \break
+  \end{itemize}
+\end{frame}
+
+
+\section{Aktuální stav řešení}
+\begin{frame}{Aktuální stav řešení}
+  \begin{itemize}
+    \item Vymyslet téma \surd \\
+    \item Sepsat zadání \surd \\
+    \item Sehnat vedoucího \surd \\
+    \item Sehnat oponenta \surd \\
+    \item Počkat na schválení !!!
+    \item Analyzovat požadavky \surd \\
+    \item Vytvořit schémata a modely
+    \item Implementovat IS
+    \item Otestovat
+    \item Sepsat dokumentaci
+  \end{itemize}
+\end{frame}
+
+
+\section{Dotazy}
+\begin{frame}{Dotazy}
+  \begin{center}
+    Prostor pro Vaše dotazy
+    \break \break \break
+    Děkuji za pozornost \\
+  \end{center}
+\end{frame}
+
+
+%\section{Závěr}\label{sec:zaver}
+%\subsection{Shrnutí}\label{sec:zaver1}
+%\subsection{Literatura}\label{sec:zaver2}
+%\subsection{Poděkování}\label{sec:zaver3}
+%\subsection{Otázky}\label{sec:zaver4}
+
+
+
+
+%\begin{frame}{obr}
+ %   \begin{figure}[h!]
+%	    \centering
+%	    \includegraphics[width=0.9\textwidth]{nic.jpg}
+%	    \caption{obr}
+%	    \label{obr:obr}
+ %   \end{figure}
+%\end{frame}
+
+
+\end{document}
