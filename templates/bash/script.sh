@@ -7,6 +7,8 @@
 #set -o pipefail # capture fail exit codes in piped commands
 #set -x         # execution tracing debug messages
 
+set -euvo pipefail
+
 # Get command info
 CMD_PWD=$(pwd)
 CMD="$0"
