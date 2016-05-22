@@ -2,7 +2,7 @@
 
 # TemplateManager
 
-template_dir="/opt/tm/templates/"
+template_dir="/opt/fik/apps/tm/templates/"
 
 function treelist() {
     
